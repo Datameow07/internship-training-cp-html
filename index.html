@@ -1,36 +1,192 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="author"  content="Dennis">
-        <meta name="keywords" content="html,Basics of WebApp">
-        <meta name="description" content="My Website for Learning">
-        <title>Learn HTML | Campuspe </title>
-    </head>
-    <body>
-        <center>
-        <table border="1">
-            <caption>Table of Content</caption>
-            <thead>
-                <tr>
-                    <th>Si </th>
-                    <th>Content Name</th>
-                    <th>Page Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Basics of HTML</td>
-                    <td><a href="basics.html">Link</a></td>
-                </tr>
-                <tr>let
-                    <td>2</td>
-                    <td>HTML Forms</td>
-                    <td><a href="forms.html">Link</a></td>
-                </tr>
-            </tbody>
-        </table>
-        </center>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dennis">
+    <meta name="keywords" content="html, basics, web development, learning">
+    <meta name="description" content="My website for learning HTML and web development">
+    <title>Learn HTML | Campuspe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #4a6fa5;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .content-table caption {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 15px;
+            background-color: #4a6fa5;
+            color: white;
+        }
+        
+        .content-table thead {
+            background-color: #34495e;
+            color: white;
+        }
+        
+        .content-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .content-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        
+        .content-table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+        
+        .content-table tbody tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .content-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .content-table a {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .content-table a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content-table th, 
+            .content-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .content-table a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Learn HTML</h1>
+            <p class="subtitle">Master the basics of web development</p>
+        </header>
+        
+        <main>
+            <table class="content-table">
+                <caption>Learning Resources</caption>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Content Name</th>
+                        <th>Page Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Basics of HTML</td>
+                        <td><a href="basics.html" aria-label="Go to Basics of HTML">View Tutorial</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>HTML Forms</td>
+                        <td><a href="forms.html" aria-label="Go to HTML Forms">View Tutorial</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>HTML Semantics</td>
+                        <td><a href="semantics.html" aria-label="Go to HTML Semantics">Coming Soon</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>CSS Styling</td>
+                        <td><a href="css.html" aria-label="Go to CSS Styling">Coming Soon</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Campuspe Learning Platform. Created by Dennis.</p>
+            <p>Start your web development journey today!</p>
+        </footer>
+    </div>
+</body>
 </html>
